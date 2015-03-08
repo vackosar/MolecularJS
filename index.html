@@ -3,31 +3,37 @@
 <link href="molecular.css" 
    media="screen, handheld, projection, tv" rel=stylesheet title=Main />
 <body>
-<div id="headlineWrap">
-	<canvas width="400" height="70" id="histogramView"></canvas>
-	<h1 id="headline" >Vaclav Kosar</h1>
-	<h3 id="headlineNote">a programmer, physicist</h3>
-	<div id="histogramNote">&rho;(E)</div>
-</div>
-<canvas width="400" height="500" class="particlesView" id="particlesView"></canvas>
-<div id="mainText">
-	<a class="green" href="skills.html">
-	Skills:
-		<ul>
-		<li>Java</li>
-		<li>EJB</li>
-		<li>JBoss</li>
-		<li>SQL</li>
-		<li>JS</li>
-		<li>Linux</li>
-		<li>Physics</li>
-		</ul>
+<div>
+	<a href="index.html" class="black">
+		<h1 id="headlineSimple" >Vaclav Kosar</h1>
 	</a>
+	<h3 id="headlineNoteSimple">a programmer, physicist</h3>
 </div>
-<div id="physicsNote">
-	<a class="red" href="thermalization.html">thermalization demonstration details</a><br><br>
-	<a class="green" href="mailto:vac-work__AT__ssl-subj-key-id-2f89032b1f7ca04c44be-415a9362b9e3ffa994b9.eu">mail me</a>
-</div>
+<table width="1000" class="center">
+	<tr><td class="td">
+		<div class="thermalizationText" width="500">
+			<h3>Thermalization demonstration</h3>
+			<h4>Summary</h4>
+			Is simple mathematical model of 2D particle system, where particles interact through <a href="http://en.wikipedia.org/wiki/Electric_potential">electric-like force</a>. The goal of this experiment is to demostrate <a href="http://en.wikipedia.org/wiki/Thermalization">thermalization</a> i.e. regardless the initial <a href="http://en.wikipedia.org/wiki/Probability_distribution">distribution</a> of energy of gas, after a certain time distribution will always become very close to the theoreticaly derived distribution of energy, except for a very small amount of specially chosen initial positions and speeds of particles.<br>
+			One can also observe large red paricle: a so called <a href="http://en.wikipedia.org/wiki/Brownian_motion">Brownian particle</a>, which is significantly heavier than other particles. Green particle shows the original starting position of the Brownian particle.<br>
+			Positions and energies of particles are generated randomly according to <a href="http://en.wikipedia.org/wiki/Uniform_distribution_%28continuous%29">uniform distribution</a> once every few seconds.
+			<h4>Theory</h4>
+			This behaviour can be proven usually up to very complicated theorem, which however is usually acceptable as a hypothesis, since there are no relevant counter examples known. This theorem is called <a href="http://en.wikipedia.org/wiki/Ergodic_theorem#Ergodic_theorems">Ergodic theorem</a>. Simply put it says that the system will attain every possible state with equal probability except for the states with higher or lower total energy. From this it is not hard to prove that for sufficiently large amount of particles the vast majority of the states of the system of particles are states, whose distibution of energy is very close to function:<br><br> 
+			<div class="center">
+				<i>&rho;(E) = b exp(-bE)</i>, <br><br>
+				where <i>exp</i> is <a href="https://en.wikipedia.org/wiki/Exponential_function">exponential function</a>,<br>
+				<i>E</i> is energy,<br>
+				<i>b = N/T</i>, where <i>N</i> is the number of particles and <i>T</i> is total energy. 
+			</div>
+			<h4>Numerical method</h4>
+			Simplified <a href="http://en.wikipedia.org/wiki/Euler_method">euler numerical method</a> without any corrections is used in this demonstration, which suffers numerical error accumulation. This mainly manifests itself in steady rise in total energy. However in the short run, it works fairly well.<br>
+		</div>
+	</td><td class="td" width="500">
+		<canvas width="400" height="70" class="histogramViewDetail" id="histogramView"></canvas>
+		<div id="histogramNoteSimple">&rho;(E) = b exp(-bE)</div>
+		<canvas width="400" height="500" class="particlesViewDetail" id="particlesView"></canvas>
+	</td><tr>
+</table>
 <script type="text/javascript" src="molecular.js"></script>
 <script type="text/javascript">window.onload=init()</script>
 </body>
