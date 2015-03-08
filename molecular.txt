@@ -1,0 +1,45 @@
+# Plan:
+
+add contacts
+add thermalization experiment describtion
+fix jumping theoretical curve?
+
+
+
+# OLD:
+Core
+	compute statistics and histograms
+	particle
+		x,y,z,px,py,pz,m,phi,V(r^2)
+		all are of type Int
+		V is electrostatic field
+	computation
+		save all the steps
+		non relativistic physics
+		integration by step (unit of time)
+		unit of time should be determined by average speed
+	display
+		stable frame rate 25 per second
+	#add physics
+		Brownial motion
+		leonard jones potential V = r^-12 - r^-6
+
+	## Optimalizations
+	# asm.js array of floats
+	# precompute value of potentials into a grid
+	#numerical method and adapting to error estimates
+	#	Runge-Kutta
+	#multitheading
+		scene = {cells}
+		thread per cell
+		if all particles have max force up to 3 cells 
+			then reading only few neighboing cells is enough
+	#V(r, phi) - rozdelit phi na segmenty a vypocitat vsechny hodnoty do array
+
+Interface
+	diplay particles in same way as you generate statistics (optinal modul)
+	speed up and slow down the time
+	#edit mean kinetic energy (temperature) multipliing energy of individual particle with factor
+	edit background field
+		hot boundary = slope to center. Cold otherwise. Both lead to equlibria with different temperatures
+

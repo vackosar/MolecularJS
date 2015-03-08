@@ -1,0 +1,101 @@
+canvas {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+.td {
+	vertical-align:top;
+}
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+.particlesView {
+	position: relative; 
+	top: -160px; 
+}
+#headlineSimple {
+	position: relative; 
+	text-align: center;
+	font-family: Monospace
+}
+#headline {
+	position: relative; 
+	top: -70px; 
+	text-align: center;
+	font-family: Monospace
+}
+#headlineNoteSimple {
+	position: relative; 
+	top: -10px; 
+	text-align: center;
+	font-family: Monospace
+}
+#headlineNote {
+	position: relative; 
+	top: -90px; 
+	text-align: center;
+	font-family: Monospace
+}
+#histogramNote {
+	position: relative; 
+	top: -110px; 
+	left: -185px;
+	text-align: center;
+	font-family: Monospace;
+	font-size: 9px;
+}
+#histogramNoteSimple {
+	position: relative; 
+	top: -40px; 
+	left: 170px;
+	font-family: Monospace;
+}
+.thermalizationText {
+	/*text-align: center;*/
+	font-family: Monospace;
+	font-size: 16px;
+}
+#skillsText {
+	position: absolute; 
+	left: 15%;
+	/*text-align: center;*/
+	font-family: Monospace;
+	font-size: 16px;
+}
+#mainText {
+	position: absolute; 
+	top: 170px; 
+	left: 45%;
+	/*text-align: center;*/
+	font-family: Monospace;
+	font-size: 20px;
+}
+.skillTitle {
+	/*text-align: center;*/
+	font-family: Monospace;
+	font-color: red;
+	color: red;
+}
+#physicsNote {
+	position: absolute; 
+	top: 450px; 
+	left: 45%;
+	text-align: center;
+	font-family: Monospace;
+	font-color: red;
+	font-weight: bold;
+	color: red;
+	font-size: 10px;
+}
+.red {
+	color: red;
+}
+.green {
+	color: green;
+}
+.black {
+	color: black;
+}
+
